@@ -189,4 +189,18 @@ class ResultSet extends Nette\Object implements \Countable, \IteratorAggregate
 		return $this->paginatedQuery;
 	}
 
+
+
+	public function toCollection()
+	{
+		return $this->toArray();
+	}
+
+
+
+	public function toArray()
+	{
+		return iterator_to_array($this);
+	}
+
 }
